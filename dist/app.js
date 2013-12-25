@@ -3027,7 +3027,7 @@
 				$.each(clusterState.routing_table.indices, function(name, index){
 					indexNames.push(name);
 				});
-				indexNames.sort().forEach(function(name) {
+				indexNames.sort().reverse().forEach(function(name) {
 					var index = clusterState.routing_table.indices[name];
 					$.each(index.shards, function(name, shard) {
 						shard.forEach(function(replica){
